@@ -1,0 +1,7 @@
+flask
+pandas
+boto3
+requests
+dash
+groq
+dotenv
