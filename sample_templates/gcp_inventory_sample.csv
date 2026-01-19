@@ -1,0 +1,3 @@
+cloud_provider,region,service_type,resource_type,resource_name,os,vcpus,memory_gb,pricing_model,hours_per_month,storage_gb
+gcp,us-central1,compute,n1-standard-4,gcp-app-02,linux,4,15,on_demand,730,0
+gcp,us-east1,compute,n1-standard-1,gcp-web-01,linux,1,3.75,on_demand,730,0
