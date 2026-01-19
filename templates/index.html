@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tele BOQ</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+
+  <body>
+    <div class="boq-page">
+      <div class="boq-header">
+        <img
+          src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/calci-logo.webp"
+          class="boq-logo"
+        />
+        <a href="/" class="boq-header-link">
+          <span class="boq-header-logo">Multicloud </span> Pricing Calculator
+        </a>
+      </div>
+      <h1 class="boq-title">
+        AI-Driven <br />
+        Multi-Cloud BOQ & Cost Calculator
+      </h1>
+      <p class="boq-subtitle">
+        Generate accurate cloud cost reports for AWS, Azure, and Google Cloud -
+        fast,<br />
+        automated, and <span>free to use.</span>
+      </p>
+      <div style="text-align: center">
+        <p class="boq-subtitle-strip">GENERATE FREE BOQ REPORT</p>
+      </div>
+      <div class="boq-main" id="boq-upload">
+        <div class="boq-left">
+          <div class="boq-illustration-wrap">
+            <span class="boq-dot blue d1"></span>
+            <span class="boq-dot yellow d2"></span>
+            <span class="boq-dot blue d3"></span>
+            <span class="boq-dot yellow d4"></span>
+            <span class="boq-dot blue d5"></span>
+            <span class="boq-dot yellow d6"></span>
+            <img
+              src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/calci-banner.webp"
+              class="boq-illustration"
+            />
+          </div>
+        </div>
+        <div class="boq-right">
+          <h3 class="boq-step-title">Choose Your Cloud Provider</h3>
+          <div class="boq-provider-box">
+            <label>
+              <img
+                class="provider-logo aws"
+                src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/awslogo.webp"
+              />
+              AWS <input type="radio" name="provider" value="AWS" />
+            </label>
+            <label>
+              <img
+                class="provider-logo azure"
+                src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/azure-logo.webp"
+              />
+              Azure <input type="radio" name="provider" value="Azure" checked />
+            </label>
+            <label>
+              <img
+                class="provider-logo gcp"
+                src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/gcp-logo.webp"
+              />
+              GCP <input type="radio" name="provider" value="GCP" />
+            </label>
+          </div>
+          <div class="boq-upload-footer">
+            <div id="uploadStatus" class="boq-upload-status"></div>
+            <button class="boq-sample-btn" onclick="downloadSample()">
+              Download Inventory Sample
+              <img
+                class="boq-sample-btn-icon"
+                src="https://cdn-icons-png.flaticon.com/256/7612/7612694.png"
+                alt=""
+              />
+            </button>
+          </div>
+          <p class="boq-helper-text">
+            Once uploaded, your data is processed instantly using our AI-driven Multicloud Pricing Calculator.
+          </p>
+          <div class="boq-upload-box">
+            <img
+              class="boq-upload-box-icon"
+              src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/upload-icon.webp"
+            />
+            <input
+              type="file"
+              id="fileInput"
+              class="boq-hidden-file"
+              onchange="uploadFile()"
+            />
+            <div class="box-footer">
+              <button
+                class="boq-upload-btn"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                Upload CSV File
+              </button>
+              <span class="boq-supported">
+                Supported formats: Excel (.xlsx) and CSV (.csv)
+              </span>
+            </div>
+          </div>
+          <a id="downloadLink" class="boq-download" style="display: none">
+            Download BOQ CSV
+          </a>
+        </div>
+      </div>
+    </div>
+    <section class="boq-howitworks">
+      <h2 class="boq-howitworks-title">How It Works</h2>
+      <div class="boq-howitworks-grid">
+        <div class="boq-step boq-step-active">
+          <div class="boq-step-number">1</div>
+          <div class="boq-step-content">
+            <h4>Upload Your Inventory</h4>
+            <p>
+              Simply upload your cloud inventory file - no manual input
+              required. Supports Excel (.xlsx) and CSV (.csv) formats.
+            </p>
+          </div>
+        </div>
+        <div class="boq-step">
+          <div class="boq-step-number">2</div>
+          <div class="boq-step-content">
+            <h4>AI-Powered Validation</h4>
+            <p>
+              Our AI automatically reads and verifies your data to ensure
+              accuracy and completeness before report generation.
+            </p>
+          </div>
+        </div>
+        <div class="boq-step">
+          <div class="boq-step-number">3</div>
+          <div class="boq-step-content">
+            <h4>Automated BOQ & Pricing</h4>
+            <p>
+              Generates a detailed Bill of Quantities and <br> multi-cloud cost
+              estimates across AWS, Azure & Google Cloud.
+            </p>
+          </div>
+        </div>
+        <div class="boq-step">
+          <div class="boq-step-number">4</div>
+          <div class="boq-step-content">
+            <h4>Download & Use</h4>
+            <p>
+              Download your BOQ and pricing report instantly ready for
+              planning, budgeting, or procurement use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="boq-why-section">
+      <div class="boq-why-container">
+        <div class="boq-why-left">
+          <h2 class="boq-why-title">Why Choose Teleglobal <br> Multicloud Pricing Calculator</h2>
+          <p class="boq-why-intro">
+            Built on years of cloud consulting and FinOps expertise, Teleglobal
+           Multicloud Pricing Calculator delivers accurate and automated cost insights across
+            multiple cloud platforms.
+          </p>
+          <div class="boq-why-right mobile">
+            <img
+              src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/bot-pricing.png"
+              alt="AI BOQ Illustration"
+              class="boq-why-image"
+            />
+          </div>
+          <ul class="boq-why-list">
+            <li>
+              Compare cloud costs across AWS, Azure, and Google Cloud in
+              seconds.
+            </li>
+            <li>
+              Get accurate and ready-to-use BOQ and cost reports automatically.
+            </li>
+            <li>
+              Upload your file once and let AI handle the analysis and report
+              creation.
+            </li>
+            <li>
+              Uses live pricing data from each provider so your numbers stay
+              current.
+            </li>
+            <li>
+              Fast, secure, and reliable for teams that need trusted results.
+            </li>
+          </ul>
+        </div>
+        <div class="boq-why-right desktop">
+          <img
+            src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/bot-banner.webp"
+            alt="AI BOQ Illustration"
+            class="boq-why-image"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="boq-cta-section">
+      <div class="boq-cta-container">
+        <div class="boq-cta-content">
+          <h2>
+            Ready To Take Control<br />
+            Of Your Cloud Costs<br />
+            With Teleglobal?
+          </h2>
+          <p>
+            Use our AI-powered Multicloud Pricing Calculator to get clear, accurate pricing
+            reports for AWS, Azure, and Google Cloud.
+          </p>
+          <a href="#boq-upload" class="boq-cta-btn">GENERATE NOW</a>
+        </div>
+        <div class="boq-cta-image"></div>
+      </div>
+    </section>
+
+    <div class="boq-powered-strip">
+      <a href="https://teleglobals.com/" target="_blank"><span>Powered by TeleGlobal</span> </a>
+      <img
+        src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/calci-logo.webp"
+        alt="Teleglobal"
+        class="boq-powered-logo"
+      />
+    </div>
+
+    <div id="boq-loader-overlay" class="boq-loader-overlay">
+      <div class="boq-loader-box">
+        <p class="boq-loader-title">Uploading</p>
+        <div class="boq-progress-bar">
+          <div id="boq-progress-fill"></div>
+        </div>
+        <p class="boq-loader-percent">
+          <span id="boq-progress-text">0%</span> Your Cloud Provider
+        </p>
+      </div>
+    </div>
+    <script src="/static/js/app.js"></script>
+    <script>
+      document.querySelectorAll('input[name="provider"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          sessionStorage.setItem("selectedProvider", radio.value);
+        });
+      });
+    </script>
+  </body>
+</html>

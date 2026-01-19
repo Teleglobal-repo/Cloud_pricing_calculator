@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tele BOQ</title>
+    <link rel="stylesheet" href="/static/css/boq.css" />
+</head>
+
+<body>
+    <div class="boq-page">
+        <div class="boq-header">
+            <img src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/calci-logo.webp"
+                class="boq-logo" />
+            <a href="/" class="boq-header-link">
+                <span class="boq-header-logo">Multicloud </span> Pricing Calculator
+            </a>
+        </div>
+        <h1 class="boq-title">
+            AI-Driven <br />
+            Multi-Cloud BOQ & Cost Calculator 
+        </h1>
+        <p class="boq-subtitle">
+            Generate accurate cloud cost reports for AWS, Azure, and Google Cloud -
+            fast, <br />
+            automated, and <span>free to use.</span>
+        </p>
+        <div class="boq-main">
+            <div class="boq-right">
+                <h3 class="boq-step-title">Selected Cloud Provider</h3>
+                <div class="boq-provider-box">
+                    <label>
+                        <img class="provider-logo aws"
+                            src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/awslogo.webp" />
+                        AWS
+                        <input type="radio" name="provider" value="AWS" />
+                    </label>
+                    <label>
+                        <img class="provider-logo azure"
+                            src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/azure-logo.webp" />
+                        Azure
+                        <input type="radio" name="provider" value="Azure" />
+                    </label>
+                    <label>
+                        <img class="provider-logo gcp"
+                            src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/gcp-logo.webp" />
+                        GCP
+                        <input type="radio" name="provider" value="GCP" />
+                    </label>
+                </div>
+
+                <div class="boq-center-wrap ">
+                    <h4 class="previewTable-title">Original File</h4>
+                    <div class="boq-table-responsive">
+                        <table id="previewTable"></table>
+                    </div>
+                    <div class="generate-btn">
+                        <button type="button" class="boq-generate-btn generate" onclick="generateBOQ()">
+                            <span class="btn-text">Verify Document & Generate Report</span>
+                            <span class="btn-percentage" style="display:none">0%</span>
+                        </button>
+
+                    </div>
+                    <h4 class="boq-generated-title" id="boqGeneratedTitle" style="display: none"></h4>
+                    <div class="boq-table-responsive">
+                        <table id="boqTable"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="boq-powered-strip">
+        <a href="https://teleglobals.com/" target="_blank"><span>Powered by TeleGlobal</span> </a>
+        <img src="https://n-teleglobalwebsitemedia.s3.ap-south-1.amazonaws.com/New-React-website-images/calci-logo.webp"
+            alt="Teleglobal" class="boq-powered-logo" />
+    </div>
+
+    <div id="boq-form-overlay" class="boq-form-overlay" style="display: none">
+        <div class="boq-form-popup">
+            <h3>Download BOQ Report</h3>
+            <p>Please fill this form to export free BOQ report</p>
+
+            <input id="sf-name" type="text" placeholder="Name*" />
+            <input id="sf-email" type="email" placeholder="Work Email*" />
+
+            <div class="sf-phone">
+                <select id="sf-callingCode">
+                    <option value="">Code</option>
+                    <option value="+91">+91 India</option>
+                    <option value="+1">+1 USA</option>
+                    <option value="+44">+44 UK</option>
+                    <option value="+44">Other</option>
+                </select>
+                <input id="sf-phone" type="text" placeholder="Contact number*" />
+            </div>
+
+            <input id="sf-company" type="text" placeholder="Company name" />
+
+            <div id="sf-message" class="sf-message"></div>
+
+            <button id="sf-submit-btn" onclick="handleSimpleSubmitHTML()">
+                <span class="sf-btn-progress"></span>
+                <span class="sf-btn-text">Download</span>
+            </button>
+
+        </div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
